@@ -57,18 +57,23 @@
 
 <h3>1. Temporary Processing (Node.js Backend)</h3>
 <ul>
-  <li>Your device sends the PDF content securely to our Node.js server.</li>
+  <li>Your device sends the PDF content securely to our Node.js server, which is hosted on Render (a third-party cloud infrastructure provider).</li>
   <li>The backend does <strong>not store, save</strong> the PDF or extracted text.</li>
   <li>The server only forwards the text to the Gemini API and sends the result back to your device.</li>
   <li>All data is immediately discarded after processing.</li>
 </ul>
 
-<h3>2. Processing by Google Gemini API</h3>
-<p>The text is temporarily processed by Google's Gemini API to generate summaries or answers.</p>
-<p><strong>Important:</strong> According to Google’s policy, data sent through Gemini API is <strong>not used to train or improve</strong> their foundational AI models.</p>
-<p>For free usage of Google's Gemini API, Google may use PDF's or data sent by the user in the app to train or improve their foundational AI models. To learn more refer to Google privacy policy or Google Gemini API privacy policy. </p>
-<p>The text is temporarily processed by Google's Gemini API to generate summaries or answers.</p>
-<p>We may switch from free usage of Gemini API to Paid usage of Gemini API or from Paid usage of Gemini API to free usage of Gemini API according to the API usage.</p>
+<h3>2. Processing by Google Gemini API (Third-Party Processor)</h3>
+<p>The PDF content is sent securely to Google's Gemini API for processing to generate summaries and answers. During this process, your data leaves our control and is subject to Google's policies.</p>
+
+<div class="note" style="border-left: 4px solid #ff0000;">
+  <strong>CRITICAL NOTICE: Data Used for Model Training</strong>
+  <p>As a new application, we currently use the Free Tier of the Google Gemini API.</p>
+  <p>According to Google's policy for free services, your uploaded PDF content and prompts (input data) may be used by Google to train and improve their foundational AI models.</p>
+  <p><strong>If you are not comfortable with your data being used for model improvement, please DO NOT upload any confidential or proprietary documents.</strong> We recommend against uploading any sensitive data while we operate on the Free Tier.</p>
+</div>
+
+<p>We intend to upgrade to the Paid Tier once usage increases significantly, at which point we will immediately update this policy to reflect that data is no longer used for training. We do not control Google's policies or their abuse monitoring retention periods.</p>
 <p>We do not control Google Privacy Policy or Google Gemini Privacy Policy.</p>
 
 
@@ -96,8 +101,9 @@
 <p>We do not control how third-party ad networks use collected data — please review their privacy policies.</p>
 
 
-<h2>Data Deletion</h2>
-<p>Because our app does not require an account and we do not store your PDFs or personal data on our own servers, there is nothing for you to request deletion of. The PDF content is processed temporarily by the Gemini API and is not retained or used for training as per Google's policy.</p>
+<h2>Data Deletion & Retention</h2>
+<p>Because our app does not require an account and we do not store your PDFs or personal data on our own servers, there is nothing for you to request deletion of from us.</p>
+<p>However, when your PDF content is processed by the Gemini API, Google's policies for abuse monitoring require them to log and retain the input (your PDF text) and output for a limited period, typically 55 days. This retention is solely for policy enforcement, security, and abuse monitoring and is separate from the model training discussed above.</p>
 
 
 <h2>Security</h2>
@@ -115,7 +121,14 @@
 <p>We may update this Privacy Policy when necessary. The latest version will always be available on this page.</p>
 
 <h2>Governing Law</h2>
-<p>This Policy and any disputes related o it will be governed by the laws of India.</p>
+<p>This Policy and any disputes related to it will be governed by the laws of India.</p>
+
+
+<h2>Terms of Service (ToS) & Governing Law</h2>
+<p>This Privacy Policy addresses how we handle your data. Your use of the app is also subject to and governed by our separate **Terms of Service (ToS)**, which outlines important details regarding user responsibility, copyright, intellectual property, and limitations on liability.</p>
+<p>By using the app, you agree to these Terms and Conditions. Please review them carefully.</p>
+<p><strong>Terms of Service Link:</strong> <a href="https://varunswaroopvarma.github.io/ai_pdf_reviewer_termsofservice/" target="_blank">View our full Terms of Service</a></p>
+<p>This Policy and any disputes related to it will be governed by the laws of India.</p>
 
 
 <h2>Contact Us</h2>
